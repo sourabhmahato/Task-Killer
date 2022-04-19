@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import InputField from './components/InputField';
+import TodoList from './components/TodoList';
 import {Todo} from "./modal"
 const App: React.FC = () => {
 
@@ -21,6 +22,11 @@ if(todo){
         TASK | KILLER
       </span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+      <TodoList todos={todos} setTodos={setTodos}/>
+      {/* {todos.map((item)=>(
+
+        <li>{item.todo}</li>
+      ))} */}
     </div>
   );
 }
